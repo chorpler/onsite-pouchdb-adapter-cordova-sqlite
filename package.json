@@ -46,7 +46,7 @@
     "release": "standard-version"
   },
   "dependencies": {
-    "pouchdb-adapter-websql-core": "../pouchdb-adapter-websql-core"
+    "pouchdb-adapter-websql-core": "../lib/pouchdb-adapter-websql-core-7.5.0.tgz"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0-rc.1",
