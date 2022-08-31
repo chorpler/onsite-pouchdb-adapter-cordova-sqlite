@@ -36,14 +36,10 @@
     "build:dev": "npm-run-all clean rollup browserify",
     "build": "npm run build:prod",
     "prepublishOnly": "npm run build",
-    "lint": "eslint bin/ src/ test/",
+    "lint": "eslint src/",
     "dev": "npm run test-local",
-    "test": "npm run rollup-cjs && node bin/run-test.js",
-    "test-local": "cross-env CLIENT=local npm run test",
-    "test-node": "cross-env CLIENT=node TEST_DB=testdb,http://localhost:5984/testdb npm run test",
-    "test-browser": "cross-env CLIENT=ChromeHeadless npm run test",
-    "test-types": "tsc --noEmit -p types",
-    "release": "standard-version"
+    "release": "standard-version",
+    "test": "npm run lint"
   },
   "dependencies": {
     "pouchdb-adapter-websql-core": "../lib/pouchdb-adapter-websql-core-7.5.0.tgz"
@@ -100,6 +96,13 @@
     "watchify": "^3.11.0",
     "whatwg-fetch": "^3.0.0",
     "zuul": "^3.12.0"
+  },
+  "scriptsComments2": {
+    "test": "npm run rollup-cjs && node bin/run-test.js",
+    "test-local": "cross-env CLIENT=local npm run test",
+    "test-node": "cross-env CLIENT=node TEST_DB=testdb,http://localhost:5984/testdb npm run test",
+    "test-browser": "cross-env CLIENT=ChromeHeadless npm run test",
+    "test-types": "tsc --noEmit -p types"
   },
   "scriptsComments": {
     "prepublish": "npm run build",
