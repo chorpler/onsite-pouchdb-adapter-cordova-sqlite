@@ -1,13 +1,17 @@
 OnSite fork
 ======
-Fork of original [pouchdb-adapter-cordova-sqlite](https://github.com/pouchdb-community/pouchdb-adapter-cordova-sqlite) designed to work better with OnSite apps. This requires a being compatible back to Node.js 10.24.1, and has been shaped to match my own coding idiosynchrasies. (There's a reason this is a private repo.) I hope you have a good reason for using this fork! I don't anticipate anybody but me ever using it, really. But that begs the question[^1]: why am I writing out these notes at all? Mostly so I won't forget what changes I made if I have to come back to this code years from now. And also I'm a bit bored and tired, so I wrote out some notes, why not? *(Zoidberg gif)*
+[pouchdb-adapter-cordova-sqlite](https://github.com/chorpler/onsite-pouchdb-adapter-cordova-sqlite) repo, fork of original [pouchdb-adapter-cordova-sqlite](https://github.com/pouchdb-community/pouchdb-adapter-cordova-sqlite) repo.
 
-The changes I made:
+## **Rationale for this fork**
+
+This fork is designed to work better with OnSite apps. This requires a being compatible back to Node.js 10.24.1, and has been shaped to match my own coding idiosynchrasies. (There's a reason this is a private repo.) I hope you have a good reason for using this fork! I don't anticipate anybody but me ever using it, really. But that begs the question[^1]: why am I writing out these notes at all? Mostly so I won't forget what changes I made if I have to come back to this code years from now. And also I'm a bit bored and tired, so I wrote out some notes, why not? *(Zoidberg gif)*
+
+## **The changes I made**
 
 - Source changed to TypeScript
 - Build uses rollup and browserify to end up with versions that should work in Node, Electron, Cordova, or browser
 
-The basic repo structure:
+## **The basic repo structure**
 
 - `src` - Source code files
 - `config` - Rollup configuration files
@@ -16,7 +20,7 @@ The basic repo structure:
 - `lib` - raw Rollup output, suitable for modules
 - `dist` - Browserify output
 
-### Updated list of Cordova SQLite plugins
+## **Updated list of Cordova SQLite plugins**
 
 | Package                                                                                                                   | Updated    | Description                                                                                                             |
 | ------------------------------------------------------------------------------------------------------------------------- | ---------- | ----------------------------------------------------------------------------------------------------------------------- |
@@ -31,7 +35,7 @@ The basic repo structure:
 
 [^1]: Tee hee
 
-***(original README starts below)***
+***[original README starts below]***
 
 ------
 
