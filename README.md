@@ -1,3 +1,44 @@
+OnSite fork
+======
+[pouchdb-adapter-cordova-sqlite](https://github.com/chorpler/onsite-pouchdb-adapter-cordova-sqlite) repo, fork of original [pouchdb-adapter-cordova-sqlite](https://github.com/pouchdb-community/pouchdb-adapter-cordova-sqlite) repo.
+
+## **Rationale for this fork**
+
+This fork is designed to work better with [OnSite](https://github.com/chorpler/OnSite) apps. This requires a being compatible back to Node.js 10.24.1, and has been shaped to match my own coding idiosynchrasies. (There's a reason this is a private repo.) I hope you have a good reason for using this fork! I don't anticipate anybody but me ever using it, really. But that begs the question[^1]: why am I writing out these notes at all? Mostly so I won't forget what changes I made if I have to come back to this code years from now. And also I'm a bit bored and tired, so I wrote out some notes, why not? *(Zoidberg gif)*
+
+## **The changes I made**
+
+- Source changed to TypeScript
+- Build uses rollup and browserify to end up with versions that should work in Node, Electron, Cordova, or browser
+
+## **The basic repo structure**
+
+- `src` - Source code files
+- `config` - Rollup configuration files
+- `compiled` - transpiled TypeScript files
+- `types` - TypeScript declaration/type files
+- `lib` - raw Rollup output, suitable for modules
+- `dist` - Browserify output
+
+## **Updated list of Cordova SQLite plugins**
+
+| Package                                                                                                                   | Repo Last Updated    | Description                                                                                                             |
+| ------------------------------------------------------------------------------------------------------------------------- | ---------- | ----------------------------------------------------------------------------------------------------------------------- |
+| [cordova-sqlite-storage](https://github.com/storesafe/cordova-sqlite-storage)                                             | 2021-07-12 | Core plugin version                                                                                                     |
+| [cordova-sqlite-ext](https://github.com/brodybits/cordova-sqlite-ext)                                                     | 2021-10-14 | Includes extra features including BASE64 (SELECT BLOB in Base64 format), REGEXP, and pre-populated databases            |
+| [cordova-sqlite-evcore-extbuild-free](https://github.com/storesafe/cordova-sqlite-evcore-extbuild-free)                   | 2022-01-16 | Plugin version with lighter resource usage in Android NDK                                                               |
+| [cordova-plugin-sqlite-evplus-ext-common-free](https://github.com/storesafe/cordova-plugin-sqlite-evplus-ext-common-free) | 2022-06-07 | Includes workaround for extra-large result data on Android and lighter resource usage on iOS, macOS, and in Android NDK |
+| [cordova-sqlcipher-adapter](https://github.com/storesafe/cordova-sqlcipher-adapter)                                       | 2021-03-31 | Includes encryption functionality using [SQLCipher](https://www.zetetic.net/sqlcipher/) for Android/iOS/macOS           |
+| [cordova-sqlite-express-build-support](https://github.com/storesafe/cordova-sqlite-express-build-support)                 | 2020-03-12 | Using built-in SQLite libraries on Android, iOS, and macOS - may be missing some important SQLite updates               |
+| [cordova-plugin-sqlite-2](https://github.com/nolanlawson/cordova-plugin-sqlite-2)                                         | 2021-05-23 | Nolan Lawson's PouchDB-focused fork                                                                                     |
+| [cordova-plugin-websql](https://github.com/Microsoft/cordova-plugin-websql)                                               | 2015-09-18 | Microsoft version written on top of C# library                                                                          |
+
+[^1]: Tee hee
+
+***[original README starts below]***
+
+------
+
 pouchdb-adapter-cordova-sqlite
 ======
 
