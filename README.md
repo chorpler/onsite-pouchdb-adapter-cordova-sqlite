@@ -6,11 +6,21 @@ The changes I made:
 
 - Source changed to TypeScript
 - Build uses rollup and browserify to end up with versions that should work in Node, Electron, Cordova, or browser
-  - `compiled` - transpiled TypeScript files
-  - `lib` - raw Rollup output, suitable for modules
-  - `dist` - Browserify output
+
+The basic repo structure:
+
+- `src` - Source code files
+- `config` - Rollup configuration files
+- `compiled` - transpiled TypeScript files
+- `types` - TypeScript declaration/type files
+- `lib` - raw Rollup output, suitable for modules
+- `dist` - Browserify output
 
 [^1]: Tee hee
+
+***(original README starts below)***
+
+------
 
 pouchdb-adapter-cordova-sqlite
 ======
