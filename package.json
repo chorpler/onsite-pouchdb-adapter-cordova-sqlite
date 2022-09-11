@@ -5,7 +5,7 @@
   "keywords": [],
   "author": "Dale Harvey <dale@arandomurl.com>",
   "license": "Apache-2.0",
-  "repository": "https://github.com/nolanlawson/pouchdb-adapter-cordova-sqlite",
+  "repository": "https://github.com/chorpler/onsite-pouchdb-adapter-cordova-sqlite",
   "main": "lib/index.js",
   "jsnext:main": "lib/index.es.js",
   "module": "lib/index.es.js",
