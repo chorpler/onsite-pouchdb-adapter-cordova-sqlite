@@ -22,7 +22,7 @@ This fork is designed to work better with OnSite apps. This requires a being com
 
 ## **Updated list of Cordova SQLite plugins**
 
-| Package                                                                                                                   | Updated    | Description                                                                                                             |
+| Package                                                                                                                   | Repo Last Updated    | Description                                                                                                             |
 | ------------------------------------------------------------------------------------------------------------------------- | ---------- | ----------------------------------------------------------------------------------------------------------------------- |
 | [cordova-sqlite-storage](https://github.com/storesafe/cordova-sqlite-storage)                                             | 2021-07-12 | Core plugin version                                                                                                     |
 | [cordova-sqlite-ext](https://github.com/brodybits/cordova-sqlite-ext)                                                     | 2021-10-14 | Includes extra features including BASE64 (SELECT BLOB in Base64 format), REGEXP, and pre-populated databases            |
